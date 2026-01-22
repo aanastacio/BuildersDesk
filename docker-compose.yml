@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  site:
+    image: aanastacio/buildersdesk-site:latest
+    container_name: buildersdesk-site
+    restart: unless-stopped
+
+  caddy:
+    image: aanastacio/buildersdesk-caddy:latest
+    container_name: buildersdesk-caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - site
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:
