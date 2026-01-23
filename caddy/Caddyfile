@@ -1,4 +1,0 @@
-buildersdeskpro.com, www.buildersdeskpro.com {
-    encode gzip
-    reverse_proxy site:3000
-}

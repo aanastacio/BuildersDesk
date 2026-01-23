@@ -28,11 +28,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/roofing-crm" className="text-slate-400 hover:text-orange-500 transition-colors">
-                  Roofing CRM
-                </Link>
-              </li>
-              <li>
                 <Link href="/book-demo" className="text-slate-400 hover:text-orange-500 transition-colors">
                   Book a Demo
                 </Link>

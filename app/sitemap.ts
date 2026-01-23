@@ -1,66 +1,25 @@
-import { MetadataRoute } from "next";
-
-export const dynamic = "force-static";
-
-type ChangeFreq = MetadataRoute.Sitemap[number]["changeFrequency"];
-
-function changeFrequencyFor(route: string): ChangeFreq {
-  switch (route) {
-    case "":
-      return "weekly";
-    case "/roofing-crm":
-      return 0.95;
-    case "/about":
-      return "monthly";
-    case "/product":
-      return "weekly";
-    case "/pricing":
-      return "weekly";
-    case "/book-demo":
-      return "monthly";
-    case "/privacy":
-      return "yearly";
-    case "/terms":
-      return "yearly";
-    default:
-      return "monthly";
-  }
-}
-
-function priorityFor(route: string): number {
-  switch (route) {
-    case "":
-      return 1;
-    case "/roofing-crm":
-      return 0.95;
-    case "/about":
-      return 0.8;
-    case "/product":
-      return 0.9;
-    case "/pricing":
-      return 0.9;
-    case "/book-demo":
-      return 0.7;
-    case "/privacy":
-      return 0.5;
-    case "/terms":
-      return 0.5;
-    default:
-      return 0.6;
-  }
-}
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://buildersdeskpro.com";
 
-  const routes = ["", "/roofing-crm", "/about", "/product", "/pricing", "/book-demo", "/privacy", "/terms"].map(
-    (route) => ({
-      url: `${baseUrl}${route}`,
-      lastModified: new Date(),
-      changeFrequency: changeFrequencyFor(route),
-      priority: priorityFor(route),
-    })
-  );
+  // Keep this aligned with your real pages (no nav changes required).
+  const routes: Array<{
+    path: string;
+    changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
+    priority: number;
+  }> = [
+    { path: "/", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/product", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/pricing", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/about", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/book-demo", changeFrequency: "monthly", priority: 0.7 },
+  ];
 
-  return routes;
+  return routes.map(({ path, changeFrequency, priority }) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency,
+    priority,
+  }));
 }
