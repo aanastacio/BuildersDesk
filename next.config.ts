@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  eslint: {
+    // Prevent build failures if ESLint isn't installed/configured
+    ignoreDuringBuilds: true,
+  },
   typescript: {
     // ignoreBuildErrors: true,
   },
