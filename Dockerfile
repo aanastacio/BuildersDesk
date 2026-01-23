@@ -1,4 +1,3 @@
-# Dockerfile for a Next.js application
 # ---------- Builder ----------
 FROM node:20-alpine AS builder
 
