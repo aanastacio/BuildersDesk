@@ -28,6 +28,9 @@ export default function Header() {
             <Link href="/" className="text-slate-300 hover:text-orange-500 font-medium transition-colors">
               Home
             </Link>
+            <Link href="/roofing-crm" className="text-slate-300 hover:text-orange-500 font-medium transition-colors">
+              Roofing CRM
+            </Link>
             <Link href="/product" className="text-slate-300 hover:text-orange-500 font-medium transition-colors">
               How It Works
             </Link>
@@ -59,6 +62,9 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <Link href="/" className="text-slate-300 hover:text-orange-500 font-medium transition-colors py-2">
                 Home
+              </Link>
+              <Link href="/roofing-crm" className="text-slate-300 hover:text-orange-500 font-medium transition-colors py-2">
+                Roofing CRM
               </Link>
               <Link href="/product" className="text-slate-300 hover:text-orange-500 font-medium transition-colors py-2">
                 How It Works
