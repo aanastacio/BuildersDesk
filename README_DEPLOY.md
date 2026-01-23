@@ -15,3 +15,5 @@ buildersdeskpro.com
 
 ## Deploy
 Push to main branch. Deployment is fully automated.
+
+Note: This deployment runs Next.js as a Node server (standalone) behind Caddy.
