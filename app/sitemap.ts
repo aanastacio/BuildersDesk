@@ -32,7 +32,7 @@ function priorityFor(route: string): number {
     case "":
       return 1;
     case "/roofing-crm":
-      return "weekly";
+      return 0.9;
     case "/about":
       return 0.8;
     case "/product":
