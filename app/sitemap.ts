@@ -1,39 +1,66 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
 
-const BASE_URL = "https://buildersdeskpro.com";
+export const dynamic = "force-static";
+
+type ChangeFreq = MetadataRoute.Sitemap[number]["changeFrequency"];
+
+function changeFrequencyFor(route: string): ChangeFreq {
+  switch (route) {
+    case "":
+      return "weekly";
+    case "/roofing-crm":
+      return "weekly";
+    case "/about":
+      return "monthly";
+    case "/product":
+      return "weekly";
+    case "/pricing":
+      return "weekly";
+    case "/book-demo":
+      return "monthly";
+    case "/privacy":
+      return "yearly";
+    case "/terms":
+      return "yearly";
+    default:
+      return "monthly";
+  }
+}
+
+function priorityFor(route: string): number {
+  switch (route) {
+    case "":
+      return 1;
+    case "/roofing-crm":
+      return "weekly";
+    case "/about":
+      return 0.8;
+    case "/product":
+      return 0.9;
+    case "/pricing":
+      return 0.9;
+    case "/book-demo":
+      return 0.7;
+    case "/privacy":
+      return 0.5;
+    case "/terms":
+      return 0.5;
+    default:
+      return 0.6;
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: `${BASE_URL}/`,
+  const baseUrl = "https://buildersdeskpro.com";
+
+  const routes = ["", "/roofing-crm", "/about", "/product", "/pricing", "/book-demo", "/privacy", "/terms"].map(
+    (route) => ({
+      url: `${baseUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${BASE_URL}/how-it-works`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    // SEO landing page (not in top nav)
-    {
-      url: `${BASE_URL}/roofing-crm`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.95,
-    },
-  ];
+      changeFrequency: changeFrequencyFor(route),
+      priority: priorityFor(route),
+    })
+  );
+
+  return routes;
 }

@@ -17,14 +17,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://buildersdeskpro.com'),
-  icons: {
-    icon: [
-      { url: '/favicon-light.ico', media: '(prefers-color-scheme: light)' },
-      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
-      { url: '/favicon.ico' },
-    ],
-    shortcut: ['/favicon.ico'],
-  },
   title: {
     default: "Builders Desk | Roofing Contractor Software - Manage Leads, Jobs & Payments",
     template: "%s | Builders Desk"
