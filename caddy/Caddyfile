@@ -1,4 +1,8 @@
-buildersdeskpro.com, www.buildersdeskpro.com {
+www.buildersdeskpro.com {
+    redir https://buildersdeskpro.com{uri} permanent
+}
+
+buildersdeskpro.com {
     encode gzip
     reverse_proxy site:3000
 }

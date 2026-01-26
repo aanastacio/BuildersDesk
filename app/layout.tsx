@@ -80,10 +80,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://buildersdeskpro.com',
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-  },
 };
 
 export default function RootLayout({
@@ -114,13 +110,6 @@ export default function RootLayout({
                   "priceCurrency": "USD",
                   "billingDuration": "P1M"
                 }
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "ratingCount": "500",
-                "bestRating": "5",
-                "worstRating": "1"
               },
               "description": "All-in-one roofing contractor software to manage leads, jobs, scheduling, invoicing, and payments.",
               "featureList": [

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Roofing CRM Software",
   description:
     "Builders Desk Pro is a roofing CRM built for contractors to manage leads, estimates, jobs, crews, and payments in one place.",
-  alternates: { canonical: "/roofing-crm" },
+  alternates: { canonical: "https://buildersdeskpro.com/roofing-crm" },
 };
 
 export default function RoofingCrmPage() {

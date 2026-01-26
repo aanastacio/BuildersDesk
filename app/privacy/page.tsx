@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description:
+    'Privacy Policy for Builders Desk. Learn how we collect, use, and protect information when you visit our site or request a demo.',
+  alternates: {
+    canonical: 'https://buildersdeskpro.com/privacy',
+  },
+};
 
 export default function PrivacyPage() {
   return (

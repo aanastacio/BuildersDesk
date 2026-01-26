@@ -24,4 +24,7 @@ export const metadata: Metadata = {
     title: 'Terms of Service - Builders Desk',
     description: 'Terms of Service for Builders Desk. Review our terms governing website use, demo requests, SMS messaging, and service agreements.',
   },
+  alternates: {
+    canonical: 'https://buildersdeskpro.com/terms',
+  },
 };
