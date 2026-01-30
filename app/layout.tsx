@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FaviconSwitcher from "@/components/FaviconSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,13 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-light.ico', media: '(prefers-color-scheme: dark)' },
+      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: light)' }
+    ],
   },
   openGraph: {
     type: 'website',
@@ -153,6 +161,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <FaviconSwitcher />
         <Header />
         {children}
         <Footer />
