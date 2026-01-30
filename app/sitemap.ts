@@ -30,7 +30,7 @@ function changeFrequencyFor(route: string): ChangeFreq {
 function priorityFor(route: string): number {
   switch (route) {
     case "":
-      return 1;
+      return 1.0;
     case "/roofing-crm":
       return 0.9;
     case "/about":
@@ -40,7 +40,7 @@ function priorityFor(route: string): number {
     case "/pricing":
       return 0.9;
     case "/book-demo":
-      return 0.7;
+      return 0.8;
     case "/privacy":
       return 0.5;
     case "/terms":
@@ -50,13 +50,31 @@ function priorityFor(route: string): number {
   }
 }
 
+function lastModifiedFor(route: string): Date {
+  // Set strategic last modified dates for better crawling
+  const now = new Date();
+  switch (route) {
+    case "":
+    case "/roofing-crm":
+    case "/product":
+    case "/pricing":
+      // Main pages updated recently
+      return new Date(now.setDate(now.getDate() - 7));
+    case "/about":
+    case "/book-demo":
+      return new Date(now.setDate(now.getDate() - 30));
+    default:
+      return new Date(now.setDate(now.getDate() - 60));
+  }
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://buildersdeskpro.com";
 
   const routes = ["", "/roofing-crm", "/about", "/product", "/pricing", "/book-demo", "/privacy", "/terms"].map(
     (route) => ({
       url: `${baseUrl}${route}`,
-      lastModified: new Date(),
+      lastModified: lastModifiedFor(route),
       changeFrequency: changeFrequencyFor(route),
       priority: priorityFor(route),
     })

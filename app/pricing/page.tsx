@@ -116,6 +116,57 @@ export default function Pricing() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is there a setup fee?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No setup fees. You can start using Builders Desk immediately after signing up. We'll help you get everything configured during your onboarding call."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I cancel anytime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can cancel your subscription at any time. No long-term contracts or cancellation fees. Your data remains accessible for 30 days after cancellation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What payment methods do you accept?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We accept all major credit cards (Visa, Mastercard, American Express) and ACH bank transfers for annual plans."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer a free trial?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We offer a 14-day free trial on all plans. No credit card required to start. Book a demo to get started."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I upgrade or downgrade my plan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can change your plan at any time. Upgrades take effect immediately, and downgrades take effect at the start of your next billing cycle."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Hero Section */}
       <section className="relative py-24 bg-slate-900 overflow-hidden">
