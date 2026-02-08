@@ -6,3 +6,7 @@ buildersdeskpro.com {
     encode gzip
     reverse_proxy site:3000
 }
+
+n8n.buildersdeskpro.com {
+    reverse_proxy n8n:5678
+}
