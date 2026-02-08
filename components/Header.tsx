@@ -40,8 +40,8 @@ export default function Header() {
             <Link href="/about" className="text-slate-300 hover:text-orange-500 font-medium transition-colors">
               About
             </Link>
-            <a href="tel:8774785356" className="text-slate-300 hover:text-orange-500 font-medium transition-colors">
-              (877) 478-5356
+            <a href="tel:8775106251" className="text-slate-300 hover:text-orange-500 font-medium transition-colors">
+              (877) 510-6251
             </a>
             <Link href="/book-demo" className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors whitespace-nowrap">
               Book Demo
@@ -75,8 +75,8 @@ export default function Header() {
               <Link href="/about" className="text-slate-300 hover:text-orange-500 font-medium transition-colors py-2">
                 About
               </Link>
-              <a href="tel:8774785356" className="text-slate-300 hover:text-orange-500 font-medium transition-colors py-2">
-                (877) 478-5356
+              <a href="tel:8775106251" className="text-slate-300 hover:text-orange-500 font-medium transition-colors py-2">
+                (877) 510-6251
               </a>
               <Link href="/book-demo" className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-center whitespace-nowrap">
                 Book Demo

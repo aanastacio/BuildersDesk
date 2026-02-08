@@ -145,7 +145,7 @@ export default function BookDemoForm() {
                   className="mt-1 w-4 h-4 text-orange-500 border-slate-300 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer"
                 />
                 <span className="ml-3 text-sm text-slate-600 leading-relaxed">
-                  I consent to receive SMS notifications and alerts from Builders Desk. Message frequency varies. Message &amp; data rates may apply. Text HELP to 877-478-5356 for assistance. You can reply STOP to unsubscribe at any time. *
+                  I consent to receive SMS notifications and alerts from Builders Desk. Message frequency varies. Message &amp; data rates may apply. Text HELP to 877-510-6251 for assistance. You can reply STOP to unsubscribe at any time. *
                 </span>
               </label>
 
@@ -181,7 +181,7 @@ export default function BookDemoForm() {
             {submitStatus === 'error' && (
               <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 text-sm font-semibold">
-                  Something went wrong. Please try again or call us at 877-478-5356.
+                  Something went wrong. Please try again or call us at 877-510-6251.
                 </p>
               </div>
             )}
