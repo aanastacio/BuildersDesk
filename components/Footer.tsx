@@ -70,8 +70,8 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:8775106251" className="text-slate-400 hover:text-orange-500 transition-colors">
-                  (877) 510-6251
+                <a href="tel:8778617547" className="text-slate-400 hover:text-orange-500 transition-colors">
+                  (877) 861-7547
                 </a>
               </li>
               <li>
