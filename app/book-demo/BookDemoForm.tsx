@@ -141,11 +141,10 @@ export default function BookDemoForm() {
                 <input
                   type="checkbox"
                   name="sms-consent"
-                  required
                   className="mt-1 w-4 h-4 text-orange-500 border-slate-300 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer"
                 />
                 <span className="ml-3 text-sm text-slate-600 leading-relaxed">
-                  I consent to receive SMS notifications and alerts from Builders Desk. Message frequency varies. Message &amp; data rates may apply. Text HELP to 877-861-7547 for assistance. You can reply STOP to unsubscribe at any time. *
+                  SMS (optional): I agree to receive text messages from Builders Desk about my demo request (confirmation, reminders, and 1:1 follow‑up). Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help.
                 </span>
               </label>
 
@@ -153,13 +152,15 @@ export default function BookDemoForm() {
                 <input
                   type="checkbox"
                   name="marketing-consent"
-                  required
                   className="mt-1 w-4 h-4 text-orange-500 border-slate-300 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer"
                 />
                 <span className="ml-3 text-sm text-slate-600 leading-relaxed">
-                  By checking this box I agree to receive occasional marketing messages from Builders Desk. *
+                  Marketing (optional): I agree to receive occasional promotional text messages from Builders Desk. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help.
                 </span>
               </label>
+
+
+              <p className="text-xs text-slate-500 leading-relaxed">SMS consent is optional. You can book a demo without opting in to text messages.</p>
             </div>
 
             <button
